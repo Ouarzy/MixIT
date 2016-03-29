@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="MixIT.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:views="using:MixIT.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    xmlns:viewModel="using:MixIT.ViewModels"
+    d:DataContext="{d:DesignInstance viewModel:MainViewModel}">
+    <Page.Resources>
+        <Style TargetType="TextBlock" x:Key="ButtonBlock">
+            <Setter Property="Foreground" Value="Beige"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        </Style>
+    </Page.Resources>
+
+    <views:ViewModelPresenter Content="{Binding CurrentPage}" />
+
+    <Page.BottomAppBar>
+        <AppBar IsOpen="True" IsSticky="True" Background="Black" Foreground="Beige">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="1">
+                    <AppBarButton Name="Home" Icon="Back" Click="GoHomeRequired" Foreground="Beige"/>
+
+                    <AppBarToggleButton Foreground="Beige" Name="Talks" Click="OnTalksSelected">
+                        <AppBarToggleButton.Content>
+                            <TextBlock Text="TALKS" Style="{StaticResource ButtonBlock}"></TextBlock>
+                        </AppBarToggleButton.Content>
+                    </AppBarToggleButton>
+
+                    <AppBarToggleButton Foreground="Beige" Name="LightningsTalks" Click="OnLightningTalkSelected">
+                        <AppBarToggleButton.Content>
+                            <TextBlock Text="LIGHT" Style="{StaticResource ButtonBlock}"></TextBlock>
+                        </AppBarToggleButton.Content>
+                    </AppBarToggleButton>
+
+                    <AppBarToggleButton Foreground="Beige" Name="FirstDay" Click="OnFirstDaySelected">
+                        <AppBarToggleButton.Content>
+                            <TextBlock Text="JOUR 1" Style="{StaticResource ButtonBlock}"></TextBlock>
+                        </AppBarToggleButton.Content>
+                    </AppBarToggleButton>
+
+                    <AppBarToggleButton Foreground="Beige" Name="SecondDay" Click="OnSecondTalkSelected">
+                        <AppBarToggleButton.Content>
+                            <TextBlock Text="JOUR 2" Style="{StaticResource ButtonBlock}"></TextBlock>
+                        </AppBarToggleButton.Content>
+                    </AppBarToggleButton>
+
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+
+</Page>
