@@ -24,11 +24,13 @@ namespace MixIT.Views
         private void OnTalksSelected(object sender, RoutedEventArgs e)
         {
             LightningsTalks.IsChecked = false;
+            Talks.IsChecked = true;
             _mainViewModel.MainPage.TalkClickCommand.Execute(null);
         }
 
         private void OnLightningTalkSelected(object sender, RoutedEventArgs e)
         {
+            LightningsTalks.IsChecked = true;
             Talks.IsChecked = false;
             _mainViewModel.MainPage.LigthtalkClickCommand.Execute(null);
         }
