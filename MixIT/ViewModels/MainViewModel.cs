@@ -59,7 +59,7 @@ namespace MixIT.ViewModels
             IList<Room> roomsWithCurrentTalks = new List<Room>();
             foreach (var room in allRooms)
             {
-                var currentTalkInThisRoom = room.Talks.FirstOrDefault(talk => !talk.IsDateUndefined && referenceTalk.Start >= talk.Start && referenceTalk.End <= talk.End);
+                var currentTalkInThisRoom = room.Talks.FirstOrDefault(talk => !talk.IsDateUndefined && referenceTalk.Start >= talk.Start && talk.End <= referenceTalk.End);
                 if (currentTalkInThisRoom != null)
                 {
                     roomsWithCurrentTalks.Add(new Room(room.Name, room.Date, new List<Talk> { currentTalkInThisRoom }));
