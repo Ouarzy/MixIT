@@ -16,7 +16,11 @@
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>MixIT_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>MixIT_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>827DF0A663EC797858C599F1EC4A7A05EE95C1C1</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -92,6 +96,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="MixIT_StoreKey.pfx" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -155,26 +160,25 @@
     <Content Include="Assets\fr.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Logo-620_300.png" />
     <Content Include="Assets\logo-mixit-black.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\logo-mixit-BW.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Tiles\Badge-48_48.scale-200.png" />
+    <Content Include="Assets\Tiles\Badge-24_24.png" />
+    <Content Include="Assets\Tiles\Logo-142_142.png" />
     <Content Include="Assets\Tiles\Logo-150_150.png" />
-    <Content Include="Assets\Tiles\Logo-150_150.scale-100.png" />
-    <Content Include="Assets\Tiles\Logo-150_150.scale-200.png" />
+    <Content Include="Assets\Tiles\Logo-300_300.png" />
     <Content Include="Assets\Tiles\Logo-310_150.png" />
-    <Content Include="Assets\Tiles\Logo-310_150.scale-100.png" />
     <Content Include="Assets\Tiles\Logo-310_310.png" />
-    <Content Include="Assets\Tiles\Logo-310_310.scale-100.png" />
     <Content Include="Assets\Tiles\Logo-44_44.png" />
-    <Content Include="Assets\Tiles\Logo-44_44.scale-100.png" />
+    <Content Include="Assets\Tiles\Logo-620_300.png" />
+    <Content Include="Assets\Tiles\Logo-620_620.png" />
     <Content Include="Assets\Tiles\Logo-71_71.png" />
-    <Content Include="Assets\Tiles\Logo-71_71Logo.scale-100.png" />
-    <Content Include="Assets\Tiles\StoreLogo.png" />
-    <Content Include="Assets\Tiles\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Tiles\Logo-88_88.png" />
+    <Content Include="Assets\Tiles\StoreLogo-50_50.png" />
     <Content Include="Assets\Toolkit.Content\ApplicationBar.Add.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -193,6 +197,7 @@
     <Content Include="Assets\Toolkit.Content\ApplicationBar.Select.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
